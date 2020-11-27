@@ -4,32 +4,32 @@ const SET_USERS = "SET_USERS";
 
 let initialState = {
 	users: [
-		{
-			id: 1,
-			photoURL: "https://imgur.com/I80W1Q0.png",
-			followed: false,
-			fullName: "Vova",
-			status: "GOAT",
-			location: { city: "Saint - Petersburg", country: "Russia" },
-		},
-		{
-			id: 2,
-			photoURL:
-				"https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/girl_female_woman_avatar-512.png",
-			followed: true,
-			fullName: "Kolya",
-			status: "Chill",
-			location: { city: "NY", country: "USA" },
-		},
-		{
-			id: 3,
-			photoURL:
-				"https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/girl_avatar_child_kid-512.png",
-			followed: false,
-			fullName: "Petya",
-			status: "Busy",
-			location: { city: "London", country: "UK" },
-		},
+	// 	{
+	// 		id: 1,
+	// 		photoURL: "https://imgur.com/I80W1Q0.png",
+	// 		followed: false,
+	// 		fullName: "Vova",
+	// 		status: "GOAT",
+	// 		location: { city: "Saint - Petersburg", country: "Russia" },
+	// 	},
+	// 	{
+	// 		id: 2,
+	// 		photoURL:
+	// 			"https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/girl_female_woman_avatar-512.png",
+	// 		followed: true,
+	// 		fullName: "Kolya",
+	// 		status: "Chill",
+	// 		location: { city: "NY", country: "USA" },
+	// 	},
+	// 	{
+	// 		id: 3,
+	// 		photoURL:
+	// 			"https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/girl_avatar_child_kid-512.png",
+	// 		followed: false,
+	// 		fullName: "Petya",
+	// 		status: "Busy",
+	// 		location: { city: "London", country: "UK" },
+	// 	},
 	],
 };
 
