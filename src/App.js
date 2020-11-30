@@ -10,6 +10,7 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
+import ProfileContainer from "./components/Profile/ProfileContainer";
 
 const App = (props) => {
 	return (
@@ -19,8 +20,8 @@ const App = (props) => {
 				<Navbar />
 				<div className="app-wrapper-content">
 					<Route
-						path="/profile"
-						render={() => <Profile store={props.store} />}
+						path="/profile/:userId?"
+						render={() => <ProfileContainer store={props.store} />}
 					/>
 					<Route
 						path="/dialogs"
