@@ -8,9 +8,10 @@ import { connect } from "react-redux";
 
 let mapStateToProps = (state) => {
 	return {
-		dialogsPage: state.dialogsPage
-	}
-}
+		dialogsPage: state.dialogsPage,
+		isAuth: state.auth.isAuth,
+	};
+};
 
 let mapDispatchToProps = (dispatch) => {
 	return {
@@ -19,9 +20,9 @@ let mapDispatchToProps = (dispatch) => {
 		},
 		sendMessage: () => {
 			dispatch(sendMessageCreator());
-		}
-	}
-}
+		},
+	};
+};
 
 const DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs);
 
