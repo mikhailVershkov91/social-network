@@ -4,22 +4,18 @@ import Preloader from "../../Preloader/Preloader";
 import ProfileStatus from "./ProfileStatus";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
-const ProfileInfo = (props) => {
-	if (!props.profile) {
+const ProfileInfo = ({profile, status, updateStatus}) => {
+	if (!profile) {
 		return <Preloader />;
 	}
 
 	return (
 		<div>
-			{/* <img
-				src="https://png.pngtree.com/thumb_back/fw800/back_our/20190617/ourmid/pngtree-blue-technology-background-banner-image_125518.jpg"
-				alt="Background"
-			></img> */}
 			<div className={classProfile.descriptionBlock}>
-				<img src={props.profile.photos.large} />
+				<img src={profile.photos.large} />
 				<ProfileStatusWithHooks
-					status={props.status}
-					updateStatus={props.updateStatus}
+					status={status}
+					updateStatus={updateStatus}
 				/>
 			</div>
 		</div>
