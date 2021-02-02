@@ -1,11 +1,84 @@
 .descriptionBlock {
-  padding: 10px;
+	padding: 0 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.photoSection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	border-radius: 20px;
+	padding: 10px;
+	height: 80%;
+}
+
+.photoSection input {
+	position: relative;
+	left: 10px;
+	bottom: 25px;
+	color: white;
+	opacity: 0.5;
+}
+
+.photoSection input:hover {
+	opacity: 1;
+}
+
+.button {
+	padding: 5px 15px;
+	border-radius: 10px;
+	border: 2px rgb(0, 0, 0) solid;
+	color: rgb(21, 21, 21);
+	font-weight: bold;
+	background-color: #fff;
+}
+
+.button:hover {
+	transition: 0.2s;
+	cursor: pointer;
+	color: rgb(75, 73, 73);
+	border: 2px green solid;
 }
 
 .mainPhoto {
-  max-width: 200px;
+	border-radius: 20px;
+	border: 1px rgb(0, 0, 0) solid;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	display: block;
+}
+
+.info {
+	width: 60%;
+	/* background-color: #fff; */
+  background-color: #ebe9e9;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	padding: 10px;
+  border-radius: 20px;
+
+}
+
+.data {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+}
+
+.data div {
+	margin-bottom: 10px;
+}
+
+.data button {
+	float: right;
 }
 
 .contact {
-  padding-left: 10px;
+	padding-left: 10px;
+}
+
+.status {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	padding-bottom: 2px;
 }

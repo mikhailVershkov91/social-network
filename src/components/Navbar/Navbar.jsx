@@ -4,8 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
 	return (
-		<div className={`${classNavbar.item} ${classNavbar.nav}`}>
-			<nav>
+		<div className={classNavbar.nav}>
 				<div>
 					<NavLink to="/profile">Profile</NavLink>
 				</div>
@@ -24,7 +23,6 @@ const Navbar = () => {
 				<div>
 					<NavLink to="/settings">Settings</NavLink>
 				</div>
-			</nav>
 		</div>
 	);
 };

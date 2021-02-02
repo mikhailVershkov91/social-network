@@ -32,14 +32,27 @@ const ProfileInfo = ({
 		});
 	};
 
+	const goToEditMode = () => {
+		setEditMode(true);
+	};
+
 	return (
-		<div>
-			<div className={classProfile.descriptionBlock}>
+		<div className={classProfile.descriptionBlock}>
+			<div className={classProfile.photoSection}>
 				<img
 					src={profile.photos.large || userPhoto}
 					className={classProfile.mainPhoto}
 				/>
 				{isOwner && <input type={"file"} onChange={onMainPhotoSelected} />}
+				{isOwner && (
+					<button className={classProfile.button} onClick={goToEditMode}>
+						Edit
+					</button>
+				)}
+			</div>
+
+			<div className={classProfile.info}>
+				<ProfileStatusWithHooks status={status} updateStatus={updateStatus} />
 
 				{editMode ? (
 					<ProfileDataForm
@@ -50,14 +63,9 @@ const ProfileInfo = ({
 				) : (
 					<ProfileData
 						isOwner={isOwner}
-						goToEditMode={() => {
-							setEditMode(true);
-						}}
 						profile={profile}
 					/>
 				)}
-
-				<ProfileStatusWithHooks status={status} updateStatus={updateStatus} />
 			</div>
 		</div>
 	);
@@ -65,12 +73,7 @@ const ProfileInfo = ({
 
 const ProfileData = ({ profile, isOwner, goToEditMode }) => {
 	return (
-		<div>
-			{isOwner && (
-				<div>
-					<button onClick={goToEditMode}>Edit</button>
-				</div>
-			)}
+		<div className={classProfile.data}>
 			<div>
 				<b>Full name:</b> {profile.fullName}
 			</div>

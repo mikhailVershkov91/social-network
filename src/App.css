@@ -1,20 +1,38 @@
-.app-wrapper {
-  margin: 0 auto;
-  width: 1200px;
-  display: grid;
-
-  grid-template-areas:
-  'header header'
-  'nav content';
-
-  grid-template-rows: 60px 1fr;
-  grid-template-columns: 2fr 10fr;
+body,
+html {
+	color: #212121;
+	height: 100%;
 }
 
-.app-wrapper-content {
-    grid-area: content;
-    background-color: rgb(208, 188, 188);
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
 }
 
+.mainPage {
+	margin-top: 60px;
+	display: flex;
+	flex-direction: row;
+  justify-content: center;
+	background-color: #ebe9e9;
+}
 
+.mainPageContainer {
+	display: flex;
+	width: 78%;
+	justify-content: flex-end;
+	box-sizing: border-box;
+  /* background-color: blue; */
 
+}
+
+.container {
+  width: 85%;
+  height: 100vh;
+  /* background-color: yellow; */
+	background-color: #ebe9e9;
+
+  padding-top: 20px;
+}
